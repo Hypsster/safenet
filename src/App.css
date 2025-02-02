@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.gradient-background {
+  background: linear-gradient(135deg, #6A11CB 0%, #2575FC 100%);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.logo-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+}
+
+.logo-image {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+.main-title {
+  font-family: 'Bungee Shade', cursive; 
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+  animation: jelly 4s infinite;
+  display: inline-block;
+}
+
+/* Keyframes for a jelly effect */
+@keyframes jelly {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1.1, 0.9);
+  }
+  50% {
+    transform: scale(0.95, 1.05);
+  }
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+/* 
+  ┌───────────────────────────────┐
+  │  CATEGORY CARDS (3 columns)   │
+  └───────────────────────────────┘
+*/
+.categories-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.category-card {
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  padding: 12px;
+  transition: background-color 0.3s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.active-card {
+  background-color: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+.category-card:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.category-icon {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.category-card h3 {
+  margin-bottom: 2px;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.category-card p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* 
+  ┌─────────────────────────────────────────┐
+  │  AUTO-RESIZING TEXT AREA (long input)  │
+  └─────────────────────────────────────────┘
+*/
+
+.auto-textarea {
+  min-height: 50px;
+  width: 80%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: 30px;
+  padding: 0 20px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+  transition: background 0.2s;
+  text-align: center;
+  line-height: 1.2;
+  font-family: 'Fredoka One', cursive;
+}
+
+.auto-textarea::placeholder {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  color: #ccc;
+  text-align: center;
+}
+
+.auto-textarea:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* 
+  ┌──────────────────────────────┐
+  │  ANALYZE BUTTON
+  └──────────────────────────────┘
+*/
+.analyze-button {
+  background-color: #ffffff;
+  color: #6A11CB;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+  margin-bottom: 40px;
+}
+
+.analyze-button:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
+}
+
+/* 
+  ┌───────────────────────────────────┐
+  │  RESULT AREA at the bottom
+  └───────────────────────────────────┘
+*/
+.result-area {
+  width: 80%;
+  max-width: 600px;
+  min-height: 100px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.result-area p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
