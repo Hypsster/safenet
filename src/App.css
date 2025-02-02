@@ -126,36 +126,48 @@ body, html {
   └─────────────────────────────────────────┘
 */
 
-.auto-textarea {
-  min-height: 50px;
-  width: 80%;
-  max-width: 600px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: none;
-  
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  
-  border-radius: 30px;
-  padding: 0 20px;
-  color: #fff;
-  font-size: 1rem;
-  outline: none;
-  resize: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  margin-bottom: 20px;
-  transition: background 0.2s;
-  text-align: center;
-  line-height: 1.2;
-  font-family: 'Fredoka One', cursive;
+.auto-textarea-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;  
+  align-items: center;  
+  gap: 0px; /* Increase spacing between textarea and button */
+  width: 100%;
 }
 
+.auto-textarea {
+  width: 50%;
+  height: 0px;
+  font-size: 16px;
+  resize: none;
+  text-align: center; /* Centers text horizontally */
+  border-radius: 15px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: bold;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 20px;
+  caret-color: transparent; /* Hides the blinking cursor */
+  
+  /* Center text vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 20px; /* Matches the textarea height */
+  padding: 1px; /* Remove extra padding */
+  padding-top: 17px;
+}
+
+/* Center placeholder text */
 .auto-textarea::placeholder {
   font-family: 'Fredoka One', cursive;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #ccc;
   text-align: center;
+  opacity: 1;
+  line-height: 22px; /* Matches textarea height */
 }
 
 .auto-textarea:focus {
@@ -168,21 +180,20 @@ body, html {
   └──────────────────────────────┘
 */
 .analyze-button {
-  background-color: #ffffff;
-  color: #6A11CB;
-  font-size: 1rem;
-  font-weight: 600;
+  background: white;
+  color: #6a11cb; /* Match theme color */
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 30px;
   border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: transform 0.2s, background 0.3s;
-  margin-bottom: 40px;
+  transition: all 0.3s ease-in-out;
 }
 
 .analyze-button:hover {
-  background-color: #f2f2f2;
-  transform: translateY(-2px);
+  background: #d8d8d8;
+  color: #5a0dab;
 }
 
 /* 
@@ -192,6 +203,7 @@ body, html {
 */
 .result-area {
   width: 80%;
+  margin-top: 50px; /* Adds space below textarea */
   max-width: 600px;
   min-height: 100px;
   background-color: rgba(255,255,255,0.1);
